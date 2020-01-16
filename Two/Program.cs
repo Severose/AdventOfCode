@@ -28,8 +28,8 @@ namespace csharp
                 return 0;
             }
 
-            result = ((mass / 3) - 2) + getRequiredFuel((mass / 3) - 2);
-            return result < 0 ? 0 : result;
+            result = (mass / 3) - 2;
+            return result;
         }
     }
 }
