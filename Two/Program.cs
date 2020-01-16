@@ -19,7 +19,7 @@ namespace csharp
             Console.WriteLine("{0} fuel required.", sum);
         }
 
-        public static int getRequiredFuel(int mass)
+        public static int evaluate(int opcode)
         {
             int result = 0;
 

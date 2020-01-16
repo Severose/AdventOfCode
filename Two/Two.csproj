@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <StartupObject>csharp.One</StartupObject>
+    <StartupObject>csharp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

@@ -6,12 +6,10 @@ namespace csharp
     [TestFixture]
     public class Test
     {
-        [TestCase(14, 2)]
-        [TestCase(1969, 966)]
-        [TestCase(100756, 50346)]
-        public void Mass_X_Requires_Y_Fuel(int x, int y)
+        [TestCase(new int[] {1, 9, 10, 3, 2, 3, 11, 0, 99, 30, 40, 50})]
+        public void OpCode_1_Values_10_20_30(int opcode)
         {
-            Assert.AreEqual(y,Program.getRequiredFuel(x));
+            Assert.AreEqual(new int[] {3500,9,10,70,2,3,11,0,99,30,40,50},Program.evaluate(opcode));
         }
     }
 }
