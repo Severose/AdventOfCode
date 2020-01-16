@@ -1,12 +1,31 @@
 ﻿using System.Collections.Generic;
+using System;
+using System.IO;
 
 namespace csharp
 {
     public class One
     {
+        static void Main()
+        {
+            string[] input = File.ReadAllLines("..\\..\\..\\Input.txt");
+            int sum = 0;
+
+            for(int i = 0; i < input.Length; i++)
+            {
+                sum += getRequiredFuel(int.Parse(input[i]));
+            }
+
+            Console.WriteLine("{0} fuel required.", sum);
+        }
+
         public static int getRequiredFuel(int mass)
         {
-            return 2;
+            int result = 0;
+
+            result = (mass/3) - 2;
+            
+            return result;
         }
 
         /*private const string AGED_BRIE = "Aged Brie";

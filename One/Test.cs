@@ -6,10 +6,13 @@ namespace csharp
     [TestFixture]
     public class OneTest
     {
-        [Test]
-        public void Mass_12_Requires_2_Fuel()
+        [TestCase(12, 2)]
+        [TestCase(14, 2)]
+        [TestCase(1969, 654)]
+        [TestCase(100756, 33583)]
+        public void Mass_X_Requires_Y_Fuel(int x, int y)
         {
-            Assert.AreEqual(2,One.getRequiredFuel(12));
+            Assert.AreEqual(y,One.getRequiredFuel(x));
         }
 
         /*private const string BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
